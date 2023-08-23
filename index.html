@@ -11,6 +11,80 @@
     <button>Verify</button>
 </body>
 </html>
+<script>
+    // document.querySelector("button").addEventListener("click",function(event){
+    //     event.timeStamp()
+    //     console.log(event.timeStamp)
+    // })
+    document.querySelector("button").addEventListener("click", function(event) {
+  console.log("Event timestamp:", event.timeStamp);
+  let btn = document.querySelector("input").value;
+        if(btn==1234){
+            alert("ok")
+        }
+        else{
+            alert(event.timeStamp)
+        }
+        function hide(e) {
+  e.currentTarget.style.visibility = "hidden";
+  console.log(e.currentTarget);
+  // When this function is used as an event handler: this === e.currentTarget
+}
+
+const ps = document.getElementsByTagName("p");
+
+for (const p of ps) {
+  // Hide the clicked <p> element
+  p.addEventListener("click", hide, false);
+}
+
+document.body.addEventListener("click", hide, false);
+
+// Click around and make paragraphs disappear
+
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
 
 <script>
     document.querySelector("button").addEventListener("click",function(){
@@ -21,4 +95,4 @@
             alert("invalid OTP")
         }
     })
-</script>
+</script> -->
